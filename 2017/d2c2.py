@@ -25,13 +25,11 @@ def calculate_checksum( cells ):
     """
     iterates over a list of cells trying to find two cells divisable by each other
     """
-    print(cells)
     for divisor in cells:
         quotients = cells
         for quotient in quotients:
             if quotient != divisor and quotient % divisor == 0:
                 return int(quotient / divisor)
-    print(cells)
     return 0
 
 for line in input.split('\n'):
